@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Microsoft.Owin.Hosting;
 using System.Threading.Tasks;
+
 
 namespace SelfHostingRestEndpoint
 {
@@ -10,6 +8,14 @@ namespace SelfHostingRestEndpoint
     {
         static void Main(string[] args)
         {
+            StartOwinWebApp().GetAwaiter().GetResult();
+        }
+
+        private static async Task StartOwinWebApp()
+        {
+            WebApp.Start<Startup>(@"http://localhost");
+
+            await Task.Delay(-1);
         }
     }
 }
