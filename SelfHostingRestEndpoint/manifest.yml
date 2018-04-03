@@ -2,9 +2,9 @@
 applications:
 - name: SelfHostingOwinRestEndpoint
   memory: 1024m
-  buildpack: dicf_hwc_buildpack_latest
+  buildpack: dicf_binary_buildpack_latest
   stack: windows2012R2
-  command: cmd /c SelfHostingRestEndpoint.exe
+  command: SelfHostingRestEndpoint.exe
   no-route: false
   health-check-type: process
   path: .\bin\Debug

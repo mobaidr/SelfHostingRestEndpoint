@@ -81,9 +81,6 @@
     <None Include="App.config" />
     <None Include="manifest.yml" />
     <None Include="packages.config" />
-    <None Include="Web.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
